@@ -1,38 +1,50 @@
-cmake_minimum_required(VERSION 3.15.3)
+cmake_minimum_required(VERSION 3.19.2)
 
-project(nucleo-f413zh)
+project(nucleo-f042k6t)
 
-enable_language(C ASM)
+enable_language(CXX C ASM)
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS OFF)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+
 
 set(STM32CUBEMX_GENERATED_FILES
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c
-    Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c
-    Core/Src/system_stm32f0xx
-    Core/Src/main.c
-    Core/Src/gpio.c
-    Core/Src/usart.c
-    Core/Src/stm32f0xx_it.c
-    Core/Src/stm32f0xx_hal_msp.c
-    startup_stm32f042x6.s)
+
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c
+        BSP/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c
+
+        BSP/Inc/main.h
+        BSP/Inc/stm32f4xx_hal_conf.h
+        BSP/Inc/stm32f4xx_it.h
+
+        BSP/Src/main.c
+        BSP/Src/stm32f4xx_hal_msp.c
+        BSP/Src/stm32f4xx_it.c
+        BSP/Src/system_stm32f4xx.c
+
+        BSP/startup_stm32f413xx.s)
 
 set(EXECUTABLE ${PROJECT_NAME}.out)
 
