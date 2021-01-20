@@ -11,6 +11,12 @@ arm gcc toolchain
 arm-none-eabi-gcc --version
 ```
 
+## making the project C/C++
+
+The '''main.c''' is the entry point of the project.
+What is needed is funtion in which a main loop in C++ is called.
+With creating a appMain.cpp/.hpp a wrapperfunction can be created which can be called from main.c.
+
 ## common problems
 
 ### already existing .zip files error When generating code with STM32CubeMX
