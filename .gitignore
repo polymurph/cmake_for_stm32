@@ -1,5 +1,5 @@
-# Filepaths
-example/build/*
+# buildpaths
+example/STM32F042K6T/BSP/build/*
 
 # Prerequisites
 *.d
