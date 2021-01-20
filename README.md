@@ -18,7 +18,6 @@ when generating the code inside Project go to the section Mcu and Firmware Packa
 Copy the link under Use Default Firmware location. Delete the problematic .zip file
 (e.g. stm32cube_fw_f0_v1110.zip) and retry generating code.
 
-
-
-source:
+## source
+project idea is based on:
 https://dev.to/younup/cmake-on-stm32-the-beginning-3766
