@@ -11,6 +11,10 @@ arm gcc toolchain
 arm-none-eabi-gcc --version
 ```
 
+## setting up CMakeLists.txt
+
+- copy the source .c/.h file directories in the CMakeLists.txt. 
+
 ## making the project C/C++
 
 The '''main.c''' is the entry point of the project.
