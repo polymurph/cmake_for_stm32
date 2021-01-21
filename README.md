@@ -31,3 +31,7 @@ Copy the link under Use Default Firmware location. Delete the problematic .zip f
 ## source
 project idea is based on:
 https://dev.to/younup/cmake-on-stm32-the-beginning-3766
+
+arm compiler options
+https://gcc.gnu.org/onlinedocs/gcc-4.4.7/gcc/ARM-Options.html
+
